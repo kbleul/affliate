@@ -16,7 +16,7 @@ app.use((req , res , next) => {
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
-    app.listen(process.env.PORT , () => { console.log("Server is running at " + process.env.PORT )})
+    app.listen(process.env.PORT || 3000, () => { console.log("Server is running at " + process.env.PORT )})
  })
   .catch(error => console.log(error))
 
