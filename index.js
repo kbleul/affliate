@@ -10,7 +10,6 @@ app.use((req , res , next) => {
     console.log(req.path, req.method , req.body)     
     res.header("Access-Control-Allow-Origin","*")
     res.header("Access-Control-Allow-Methods","POST")
-    res.header("Access-Control-Allow-Headers","Content-Type")
 
     next()
 })
