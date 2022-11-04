@@ -5,9 +5,6 @@ const mongoose = require("mongoose")
 const Fitness = require("./emailmodel");
 const app = express()
 const cors = require("cors");
-//middlewares
-app.use(express.json())
-app.use(cors());
 
 app.use((req , res , next) => { 
     console.log(req.path, req.method , req.body)     
@@ -18,6 +15,9 @@ app.use((req , res , next) => {
     next()
 })
 
+//middlewares
+app.use(express.json())
+app.use(cors());
 
 
 mongoose.connect(process.env.MONGO_URI)
