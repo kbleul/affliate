@@ -10,4 +10,4 @@ const EmailSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("fitness", EmailSchema);
+module.exports = mongoose.model("keto-giveaway", EmailSchema);
