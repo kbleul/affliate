@@ -37,7 +37,7 @@ mongoose.connect(process.env.MONGO_URI)
       try {
          await newEmail.save();
         res.status(200).json({"msg" : "Email saved."});
-      } catch(error) {
-        res.status(400).json({"error" : "Email not saved."});
-      }
+
+      } catch(error) {  res.status(400).json({"error" : "Email not saved."});   }
+
   })
